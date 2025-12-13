@@ -123,7 +123,7 @@ defmodule TreeDrawing do
     arvore = arvore()
     resultado = calcular_coordenadas(arvore)
 
-    IO.puts "=== coordenadas dos nós: ==="
+    IO.puts "Coordenadas dos nós:"
     imprimir_coordenadas(resultado)
     resultado
   end
@@ -131,7 +131,7 @@ defmodule TreeDrawing do
   # função auxiliar que imprime as coordenadas de cada nó
   defp imprimir_coordenadas(nil), do: :ok
   defp imprimir_coordenadas(%Tree{key: chave, val: valor, x: coordenada_x, y: coordenada_y, left: esquerda, right: direita}) do
-    IO.puts "Nó #{chave}(#{valor}): (x=#{coordenada_x}, y=#{coordenada_y})"
+    IO.puts "nó #{chave}(#{valor}): (x=#{coordenada_x}, y=#{coordenada_y})"
     imprimir_coordenadas(esquerda)
     imprimir_coordenadas(direita)
   end
